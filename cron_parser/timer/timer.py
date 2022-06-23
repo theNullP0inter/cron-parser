@@ -1,6 +1,9 @@
 from cron_parser.timer.field import Field
 
 class Timer:
+    '''
+        Timer parses and stores the Cron Expression
+    '''
 
     statement = None
     
@@ -25,6 +28,9 @@ class Timer:
         self.day_of_week.set_value(statement[4])
     
     def describe(self):
+        '''
+            describe prints cron data in a readable format
+        '''
         print("Minute", self.minute.value )
         print("Hour", self.hour.value )
         print("Day", self.day.value )

@@ -1,8 +1,7 @@
 # Cron parser 
 
-A command line application or script which parses a cron string and expands each field
+A command line application built on python which parses a cron string and expands each field
 to show the times at which it will run.
-
 
 
 ## First time setup
@@ -12,7 +11,7 @@ Clone the repository
     git clone https://github.com/theNullP0inter/cron-parser.git
 ```
 
-There are 2 ways to run this code on your system
+There are 2 ways to run this code on your system:
 
 
 ### Using Python
@@ -62,3 +61,12 @@ There are 2 ways to run this code on your system
     ```
         docker run cron-parser poetry run pytest
     ```
+
+## Code Overview
+
+* All the unit tests for the code is in `tests/`
+* All the code is present in `cron_parser/`
+* In `cron_parsers/`, there are 2 modules
+    *  `scheduler` takes care of creating a task and executing it
+    * `timer` is a library to help scheduler manage the times at which the task should run
+

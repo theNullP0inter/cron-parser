@@ -4,10 +4,19 @@ LIST_IDENTIFIER=","
 STEP_IDENTIFIER="/"
 
 class Field:
+    '''
+        Field represents the 5 time fields in a cron expression.
+
+        initialized with min & max limits of the field
+
+        set_value is called after parsing the cron expression and assigning values to all time fields
+        
+    '''
     
     def __init__(self, _min, _max):
         self.min = _min
         self.max = _max
+        self.value = None
     
     def set_value(self, value):
         if value == "*":
